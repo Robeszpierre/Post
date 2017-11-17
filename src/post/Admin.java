@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Admin {
     
-    ArrayList<Ujsag> list = new ArrayList<Ujsag>();
+    ArrayList<Ujsag> list;
     Scanner sin = new Scanner(System.in);
     
     ////////////////////////////////////////////////
