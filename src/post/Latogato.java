@@ -7,8 +7,8 @@ import static post.Post.list;
 public class Latogato {
     
     public static void Listazas(){
-        
     }
-    protected void Kereses(){}
+    protected void Kereses(){
+    }
     private void Regisztracio(){} 
 }
