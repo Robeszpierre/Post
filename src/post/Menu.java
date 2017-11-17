@@ -23,5 +23,7 @@ public class Menu {
         }
         reader.nextLine();
         }while(choice < 1 || choice > 4);
+        
+        System.out.println("csá Krisztián");
     }
 }
