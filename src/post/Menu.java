@@ -11,9 +11,14 @@ public class Menu {
         System.out.println("1 - Login\n" + "2 - Registration\n" + "3 - Login as Admin\n" + "9 - Exit");
         
         System.out.print("Enter a number: ");
-        switch(reader.nextInt()){
-            
-            
+        executeCommand(reader.nextInt());
+    }
+    
+    //Vegrehajtja a parancsot
+    private static void executeCommand(int input){
+        switch(input){
+            case 1: 
+                
             case 9: Post.finished();
         }
     }
