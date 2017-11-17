@@ -7,6 +7,7 @@ public class Post {
     static ArrayList<Ujsag> list = new ArrayList<Ujsag>();
     
     private static Boolean finished=false;
+    private static Boolean bejelentkezett=false;
     
      public static void main(String[] args) {
         new Post().start();
@@ -14,8 +15,14 @@ public class Post {
     }
 
     private void start() {
+        Latogato latogato=new Latogato();
         while(!finished){
-            Menu.displayRegistrationMenu();
+            if(!bejelentkezett){
+                Menu.regiszTraciosMenu(latogato);
+            }else if(bejelentkezett){
+                Ugyfel ugyfel=new Ugyfel();
+                Menu.ugyfelMenu(ugyfel);
+            }
         }
     }
 
@@ -23,5 +30,8 @@ public class Post {
         finished=true;
     }
    
+    public static void bejelentkezett(){
+        bejelentkezett=true;
+    }
     
 }
