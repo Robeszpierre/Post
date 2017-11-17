@@ -1,14 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package post;
 
-/**
- *
- * @author Kertész Krisztián
- */
+
 public class Ujsag {
+    private String nev;
+    private int ar;
     
+    public Ujsag(String _nev, int _ar){
+        nev=_nev;
+        ar=_ar;
+    }
 }
