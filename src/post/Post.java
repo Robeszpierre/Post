@@ -1,7 +1,11 @@
 package post;
 
+import java.util.*;
 
 public class Post {
+    
+    static ArrayList<Ujsag> list = new ArrayList<Ujsag>();
+    
     private static Boolean finished=false;
     
      public static void main(String[] args) {
