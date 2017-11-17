@@ -6,7 +6,7 @@ import static post.Post.list;
 
 public class Ugyfel extends Latogato {
     
-    public void Belepes(){}
-    public void Megrendeles(){Fizetes();}
-    public void Fizetes(){}
+    public void belepes(){}
+    public void megrendeles(){}
+    public void fizetes(){}
 }
