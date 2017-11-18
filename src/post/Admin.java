@@ -6,9 +6,11 @@ import static post.Post.list;
 
 public class Admin {
     
-    public void Felvitel(){
+    public void felvitel(){
         try{
-            String n; int a; boolean ok=false;
+            String n; 
+            int a; 
+            boolean ok=false;
             while(ok!=true){
                 try{
                     ok=true;
@@ -28,7 +30,7 @@ public class Admin {
         }
     }
     
-    public void Modositas(){
+    public void modositas(){
         try{
             boolean ok=false;
             while(ok!=true){
@@ -60,7 +62,7 @@ public class Admin {
         }
     }
     
-    public void Torles(){
+    public void torles(){
         try{
             System.out.println("Melyik termek adatait szeretne torolni? (index)");
             int i=reader.nextInt();

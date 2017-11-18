@@ -28,4 +28,8 @@ public class Ujsag {
     public int getAr(){
         return ar;
     }
+    
+    public String kiir(){
+        return nev + " " + ar;
+    }
 }

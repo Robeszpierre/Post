@@ -6,7 +6,7 @@ import static post.Post.list;
 
 public class Beszallito {
     
-    public void Arajanlat(){
+    public void arajanlat(){
         
     }
     public void BeszIgAtt(){}
