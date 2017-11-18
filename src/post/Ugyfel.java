@@ -54,28 +54,24 @@ public class Ugyfel extends Latogato {
                 case 2:
                     System.out.println("Adja meg a bankkartyaszamat!");     //bankkárya azonosítása
                     String vevo=reader.next();
-                    boolean siker=false;
-                    for(int i=0; i<bank.size(); i++){
-                        if (bank.get(i).nev.equals(vevo)){
-                            int proba=0;
-                            do{                                             //jelszó max 3x
-                                proba++;
-                                System.out.println("Adja meg a jelszavat!");
-                                String pw=reader.next();
-                                if(pw.equals(bank.get(i).pw)){
-                                    siker=true;
-                                } else {
-                                    System.out.println("Rossz jelszo");
-                                }
-                            }while(proba<=3 || siker!=true);
-                        }
+                    int i=0;
+                    while (!bank.get(i).nev.equals(vevo) && i<bank.size()){
+                        i++;
                     }
-                    if (siker!=true){
-                        System.out.println("Sikertelen tranzakció");
-                    } else {
-                        list.get(id).setDb(list.get(id).getDb()-1);
-                        System.out.println("Koszonjuk a vasarlast!");
-                    }                    
+                    
+                    boolean ok=false;
+                    int proba=0;
+                    while (proba<3 && ok!=true){
+                        System.out.println("Adja meg a jelszavat!");
+                        String passw=reader.next();
+                        if(bank.get(i).pw.equals(passw)){
+                            ok=true;
+                            list.get(id).setDb(list.get(id).getDb()-1);
+                            System.out.println("Koszonjuk a vasarlast!");
+                        } else {
+                            System.out.println("Hibas jelszo!");
+                        }
+                    }    
                     break;
             }
         }catch(Exception e){
