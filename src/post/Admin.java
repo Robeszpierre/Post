@@ -9,7 +9,8 @@ public class Admin {
     public void felvitel(){
         try{
             String n; 
-            int a; 
+            int a;
+            int d;
             boolean ok=false;
             while(ok!=true){
                 try{
@@ -18,7 +19,9 @@ public class Admin {
                     n=reader.next();
                     System.out.println("Adja meg a termek arat!");
                     a=reader.nextInt();
-                    list.add(new Ujsag(n,a));
+                    System.out.println("Adja meg a termek darabszamat!");
+                    d=reader.nextInt();
+                    list.add(new Ujsag(n,a,d));
                 }catch(Exception e){
                     ok=false;
                     System.out.println("Helytelenul kitoltott adatlap!");

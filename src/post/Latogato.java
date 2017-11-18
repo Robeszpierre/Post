@@ -15,6 +15,7 @@ public class Latogato {
             if (list.isEmpty()) {
                 System.out.println("A termekek nem erhetoek el!");
             } else {
+                System.out.println("A termekek listaja:");
                 for(int i=0; i<list.size(); i++){
                     System.out.println(list.get(i).kiir());
                 }
