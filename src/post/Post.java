@@ -47,7 +47,8 @@ public class Post {
         while(fileInput.hasNext()){
             String nev=fileInput.nextLine();
             int ar=Integer.parseInt(fileInput.nextLine());
-            list.add(new Ujsag(nev, ar));
+            int darabSzam=Integer.parseInt(fileInput.nextLine());
+            list.add(new Ujsag(nev, ar, darabSzam));
         }
         fileInput.close();
         }catch(FileNotFoundException e){
