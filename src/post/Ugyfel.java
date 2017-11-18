@@ -40,7 +40,7 @@ public class Ugyfel extends Latogato {
         
         try{
             ArrayList<Bankcard>bank = new ArrayList<Bankcard>();
-            Scanner Fileinput=new Scanner(new File("./src/post/bka"));
+            Scanner Fileinput=new Scanner(new File("./src/post/Bankkartya/bka.txt"));
             while(Fileinput.hasNextLine()){
                 bank.add(new Bankcard(Fileinput.next(),Fileinput.next()));
             }
@@ -79,7 +79,7 @@ public class Ugyfel extends Latogato {
                     break;
             }
         }catch(Exception e){
-            System.out.println("A funkcio nem elerheto!");
+            System.out.println("A  bankkartyas funkcio nem elerheto!");
         }
         
     }
