@@ -16,7 +16,8 @@ public class Admin {
                 try{
                     ok=true;
                     System.out.println("Adja meg a termek nevet!");
-                    n=reader.next();
+                    reader.nextLine();
+                    n=reader.nextLine()+"\t";
                     System.out.println("Adja meg a termek arat!");
                     a=reader.nextInt();
                     System.out.println("Adja meg a termek darabszamat!");
@@ -46,7 +47,7 @@ public class Admin {
                     int adattag=reader.nextInt();
                     if (adattag==1) {
                         System.out.println("Adja meg a termek uj nevet!");
-                        list.get(i).setNev(reader.next());
+                        list.get(i).setNev(reader.next()+"\t");
                         ok=true;
                     }
                     if (adattag==2) {

@@ -62,6 +62,8 @@ public class Menu {
             break;
             case 3: admin.modositas();
             break;
+            case 4: admin.torles();
+            break;
             case 8: Post.kijelentkezettAdminkent();
                     Post.kijelentkezett();
             break;
