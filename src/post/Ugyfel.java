@@ -7,13 +7,23 @@ import java.io.*;
 import java.util.*;
 
 public class Ugyfel extends Latogato {
-    
-    public void belepes(){}
-    
+
     public void megrendeles(){
-        System.out.println("Melyik termekbol szeretne vasarolni?");
-        int i=reader.nextInt();
-        fizetes(i);
+        try{
+            System.out.println("Adja meg a kereses felteteleit!");
+            kereses();
+            System.out.println("Melyik termekbol szeretne vasarolni? (index)");
+            int i=reader.nextInt();
+            System.out.println("Biztosan a " + i-- + ".elemet szeretne megvasarolni? (y/n)");
+            String val=reader.next();
+            if (val.equals("y")){
+                fizetes(i);
+            } else {
+                System.out.println("Ajanlat elutasitva.");
+            }
+        }catch(Exception e){
+            System.out.println("A funkcio nem elerheto");
+        }
     }
     
     public void fizetes(int id){
