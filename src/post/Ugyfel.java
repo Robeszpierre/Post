@@ -14,9 +14,9 @@ public class Ugyfel extends Latogato {
             kereses();
             System.out.println("Melyik termekbol szeretne vasarolni? (index)");
             int i=reader.nextInt();
-            System.out.println("Biztosan a " + i-- + ".elemet szeretne megvasarolni? (y/n)");
+            System.out.println("Biztosan a " + i-- + ".elemet szeretne megvasarolni? (i/n)");
             String val=reader.next();
-            if (val.equals("y")){
+            if (val.equals("i")){
                 fizetes(i);
             } else {
                 System.out.println("Ajanlat elutasitva.");
