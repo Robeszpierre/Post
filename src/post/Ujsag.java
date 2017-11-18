@@ -5,6 +5,7 @@ package post;
 public class Ujsag {
     private String nev;
     private int ar;
+
     private int darabSzam;
     
     ///////////////////////////////////////
@@ -23,6 +24,10 @@ public class Ujsag {
         ar=_ar;
     }
     
+    public void setDb(int _db){
+        db=_db;
+    }
+    
     public String getNev(){
         return nev;
     }
@@ -31,7 +36,11 @@ public class Ujsag {
         return ar;
     }
     
+    public int getDb(){
+        return db;
+    }
+    
     public String kiir(){
-        return nev + " " + ar;
+        return nev + " " + ar + " " + db;
     }
 }
