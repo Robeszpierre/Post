@@ -8,10 +8,19 @@ public class Menu {
     
     //Megjeleniti a latogato menut es varja a valaszt
     public static void regiszTraciosMenu(Latogato latogato){
-        System.out.println("1 - Bejelentkezes\n" + "2 - Registration\n" + "9 - Kilepes");
+        System.out.println("1 - Bejelentkezes\n" + "2 - Regisztracio\n" + "3 - listazas\n" + "9 - Kilepes");
         
         System.out.print("Add meg a parancs sorszamat: ");
-        executeCommand(reader.nextInt(), latogato);
+        Boolean validInput=false;
+        while(!validInput){
+            try{
+            int input=Integer.parseInt(reader.next());
+            executeCommand(input, latogato);
+            validInput=true;
+            }catch(Exception e){
+                System.out.println("Menupont sorszamat add meg!");
+            }
+        }
     }
     
     //Vegrehajtja a parancsot
@@ -21,6 +30,8 @@ public class Menu {
             break;
             case 2: latogato.regisztracio();
             break;
+            case 3: Ugyfel.listazas();
+            break;
             case 9: Post.finished();
         }
     }
@@ -29,7 +40,16 @@ public class Menu {
     public static void ugyfelMenu(Ugyfel ugyfel){
         System.out.println("1 - listazas\n" + "2 - kereses\n" + "3 - megrendeles\n" + "8 - kijelentkezes\n" + "9 - Kilepes a programbol");
         System.out.print("Add meg a parancs sorszamat ");
-        executeCommand2(reader.nextInt(), ugyfel);
+        Boolean validInput=false;
+        while(!validInput){
+            try{
+            int input=Integer.parseInt(reader.next());
+            executeCommand2(input, ugyfel);
+            validInput=true;
+            }catch(Exception e){
+                System.out.println("Menupont sorszamat add meg!");
+            }
+        }
     }
     
      //Vegrehajtja a parancsot
@@ -51,7 +71,16 @@ public class Menu {
     public static void adminMenu(Admin admin){
         System.out.println("1 - listazas\n" + "2 - felvitel\n" + "3 - modositas\n" + "4 - torles\n" + "8 - kijelentkezes\n" + "9 - Kilepes a programbol");
         System.out.print("Add meg a parancs sorszamat ");
-        executeCommand3(reader.nextInt(), admin);
+        Boolean validInput=false;
+        while(!validInput){
+            try{
+            int input=Integer.parseInt(reader.next());
+            executeCommand3(input, admin);
+            validInput=true;
+            }catch(Exception e){
+                System.out.println("Menupont sorszamat add meg!");
+            }
+        }
     }
 
     private static void executeCommand3(int input, Admin admin) {
