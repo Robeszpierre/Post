@@ -44,6 +44,7 @@ public class Ugyfel extends Latogato {
             while(Fileinput.hasNextLine()){
                 bank.add(new Bankcard(Fileinput.next(),Fileinput.next()));
             }
+            
             System.out.println("Kezpenzzel vagy bankkarrtyaval fizetne? (1/2)");
             int val=reader.nextInt();
             switch(val){
