@@ -27,7 +27,7 @@ public class Beszallito {
             System.out.println("A funkcio nem elereto!");
         }
     }
-    
-    public void BeszIgAtt(){}
-    public void Kedvezmeny(){}
+
+    public void beszerzesiIgenyAttekintes(){}
+    public void kedvezmeny(){}
 }

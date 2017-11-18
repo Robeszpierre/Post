@@ -1,0 +1,30 @@
+Blikk
+179
+43
+Bors	
+151
+23
+Lokal	
+149
+12
+Magyar Hirlap	
+144
+65
+Magyar idok	
+178
+76
+Magyar Nemzet	
+138
+34
+Nemzeti Sport	
+24
+65
+Nepszabadsag	
+200
+23
+Nepszava	
+132
+76
+Vilaggazdasag	
+185
+34

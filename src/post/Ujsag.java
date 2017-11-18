@@ -5,14 +5,15 @@ package post;
 public class Ujsag {
     private String nev;
     private int ar;
-    private int db;
+
+    private int darabSzam;
     
     ///////////////////////////////////////
     
-    public Ujsag(String _nev, int _ar, int _db){
+    public Ujsag(String _nev, int _ar, int _darabSzam){
         nev=_nev;
         ar=_ar;
-        db=_db;
+        darabSzam= _darabSzam;
     }
     
     public void setNev(String _nev){

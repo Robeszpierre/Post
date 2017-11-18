@@ -57,6 +57,7 @@ public class Latogato {
                     System.out.print("Add meg a jeszavad: ");
                     if(Fileinput.next().equals(reader.next())){
                         System.out.println("Sikeresen bejelentkeztel!");
+                        Post.bejelentkezett();
                     }else{
                         System.out.println("Rossz jelszot adtal meg!");
                     }
