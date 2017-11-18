@@ -42,6 +42,10 @@ public class Ujsag {
         return db;
     }
     
+    public int getOdb(){
+        return odb;
+    }
+    
     public String kiir(){
         return nev + " " + ar + " " + db;
     }

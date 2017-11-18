@@ -70,9 +70,9 @@ public class Admin {
         try{
             System.out.println("Melyik termek adatait szeretne torolni? (index)");
             int i=reader.nextInt();
-            System.out.println("Biztosan torolni akarja a " + i-- + ".elemet? (y/n)");
+            System.out.println("Biztosan torolni akarja a " + i-- + ".elemet? (i/n)");
             String ok=reader.next();
-            if(ok.equals("y")){list.remove(i); System.out.println("A termek torolve.");}
+            if(ok.equals("i")){list.remove(i); System.out.println("A termek torolve.");}
             else {System.out.println("A termek nem lett torolve");}
         }catch(Exception e){
             System.out.println("A funkcio nem elerheto!");
