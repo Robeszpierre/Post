@@ -61,6 +61,9 @@ public class Latogato {
                         if(felhasznalonev.equals("admin")){
                             Post.bejelentkezettAdminkent();
                         }
+                        if(felhasznalonev.equals("beszallito")){
+                            Post.bejelentkezettBeszallitokent();
+                        }
                     }else{
                         System.out.println("Rossz jelszot adtal meg!");
                     }

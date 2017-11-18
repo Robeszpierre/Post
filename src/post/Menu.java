@@ -82,7 +82,8 @@ public class Menu {
             }
         }
     }
-
+    
+    //Vegrehajtja a parancsot
     private static void executeCommand3(int input, Admin admin) {
         switch(input){
             case 1: Ugyfel.listazas();
@@ -94,6 +95,39 @@ public class Menu {
             case 4: admin.torles();
             break;
             case 8: Post.kijelentkezettAdminkent();
+                    Post.kijelentkezett();
+            break;
+            case 9: Post.finished();
+        }
+    }
+    
+    public static void beszallitoMenu(Beszallito beszallito){
+        System.out.println("1 - listazas\n" + "2 - arajanlat\n" + "3 - beszerzesi igeny attekintes\n" + "4 - kedvezmeny\n" + "8 - kijelentkezes\n" + "9 - Kilepes a programbol");
+        System.out.print("Add meg a parancs sorszamat ");
+        Boolean validInput=false;
+        while(!validInput){
+            try{
+            int input=Integer.parseInt(reader.next());
+            executeCommand4(input, beszallito);
+            validInput=true;
+            }catch(Exception e){
+                System.out.println("Menupont sorszamat add meg!");
+            }
+        }
+    }
+    
+    //Vegrehajtja a parancsot
+    private static void executeCommand4(int input, Beszallito beszallito) {
+        switch(input){
+            case 1: Ugyfel.listazas();
+            break;
+            case 2: beszallito.arajanlat();
+            break;
+            case 3: beszallito.beszerzesiIgenyAttekintes();
+            break;
+            case 4: beszallito.kedvezmeny();
+            break;
+            case 8: Post.kijelentkezettBeszallitokent();
                     Post.kijelentkezett();
             break;
             case 9: Post.finished();

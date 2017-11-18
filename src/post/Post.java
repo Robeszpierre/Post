@@ -10,7 +10,8 @@ public class Post {
     
     private static Boolean finished=false;
     private static Boolean bejelentkezett=false;
-    private  static  Boolean adminkent=false;
+    private static Boolean adminkent=false;
+    private static Boolean beszallitokent=false;
     
      public static void main(String[] args) {
         new Post().start();
@@ -27,7 +28,11 @@ public class Post {
                 if(adminkent){
                     Admin admin=new Admin();
                     Menu.adminMenu(admin);
-                }else{
+                }else if(beszallitokent){
+                    Beszallito beszallito=new Beszallito();
+                    Menu.beszallitoMenu(beszallito);
+                }
+                else{
                     Ugyfel ugyfel=new Ugyfel();
                     Menu.ugyfelMenu(ugyfel);
                 }
@@ -53,6 +58,14 @@ public class Post {
     
     public static void kijelentkezettAdminkent() {
         adminkent=false;
+    }
+    
+    public static void bejelentkezettBeszallitokent(){
+        beszallitokent=true;
+    }
+    
+    public static void kijelentkezettBeszallitokent() {
+        beszallitokent=false;
     }
     
     private void termekekBetoltese(){
