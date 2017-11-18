@@ -10,6 +10,7 @@ public class Post {
     
     private static Boolean finished=false;
     private static Boolean bejelentkezett=false;
+    private  static  Boolean adminkent=false;
     
      public static void main(String[] args) {
         new Post().start();
@@ -23,8 +24,13 @@ public class Post {
             if(!bejelentkezett){
                 Menu.regiszTraciosMenu(latogato);
             }else if(bejelentkezett){
-                Ugyfel ugyfel=new Ugyfel();
-                Menu.ugyfelMenu(ugyfel);
+                if(adminkent){
+                    Admin admin=new Admin();
+                    Menu.adminMenu(admin);
+                }else{
+                    Ugyfel ugyfel=new Ugyfel();
+                    Menu.ugyfelMenu(ugyfel);
+                }
             }
         }
     }
@@ -37,8 +43,16 @@ public class Post {
         bejelentkezett=true;
     }
     
-    public static void kijelentkezett() {
+    public static void kijelentkezett(){
         bejelentkezett=false;
+    }
+    
+    public static void bejelentkezettAdminkent(){
+        adminkent=true;
+    }
+    
+    public static void kijelentkezettAdminkent() {
+        adminkent=false;
     }
     
     private void termekekBetoltese(){

@@ -58,6 +58,9 @@ public class Latogato {
                     if(Fileinput.next().equals(reader.next())){
                         System.out.println("Sikeresen bejelentkeztel!");
                         Post.bejelentkezett();
+                        if(felhasznalonev.equals("admin")){
+                            Post.bejelentkezettAdminkent();
+                        }
                     }else{
                         System.out.println("Rossz jelszot adtal meg!");
                     }
