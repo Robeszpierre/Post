@@ -17,7 +17,7 @@ public class Latogato {
             } else {
                 System.out.println("A termekek listaja:");
                 for(int i=0; i<list.size(); i++){
-                    System.out.println(list.get(i).kiir());
+                    System.out.println(i+1 + " " + list.get(i).kiir());
                 }
             }
         }catch(Exception e){
@@ -39,7 +39,7 @@ public class Latogato {
                 for(int i=0; i<list.size(); i++){
                     if (list.get(i).getAr()<=max){
                         volt=true;
-                        System.out.println(list.get(i).kiir());
+                        System.out.println(i+1 + " " + list.get(i).kiir());
                     }
                 }
             }

@@ -7,6 +7,7 @@ public class Ujsag {
     private int ar;
 
     private int db;
+    private int odb;
     
     ///////////////////////////////////////
     
@@ -14,6 +15,7 @@ public class Ujsag {
         nev=_nev;
         ar=_ar;
         db= _db;
+        odb=db;
     }
     
     public void setNev(String _nev){
