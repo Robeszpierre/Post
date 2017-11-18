@@ -3,8 +3,11 @@ package post;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import static post.Menu.reader;
 import static post.Post.list;
 
@@ -47,7 +50,29 @@ public class Latogato {
             System.out.println("A funkcio nem erheto el!");
         }
     }
-    public void regisztracio(){} 
+    public void regisztracio(){
+        System.out.print("Add meg a felhasznaloneved: ");
+        String felhasznalonev=reader.next();
+        Boolean letezik=false;
+        while(!letezik){
+        File felhasznaloFile = new File("./src/post/Felhasznalok/"+felhasznalonev+".txt");
+            if(!felhasznaloFile.exists()){
+                letezik=true;
+            }else{
+                System.out.print("Felhasznalonev mar letezik!\nAdj meg masik felhasznalonevet: ");
+                felhasznalonev=reader.next();
+            }
+        }
+        System.out.print("Add meg a jelszavad: ");
+        String jelszo=reader.next();
+        try {
+            PrintWriter ujFelhasznaloFile = new PrintWriter("./src/post/Felhasznalok/"+felhasznalonev+".txt");
+            ujFelhasznaloFile.println(jelszo);
+            ujFelhasznaloFile.close();
+        } catch (FileNotFoundException ex) {
+            System.err.println("File nem talalhato");
+        }
+    } 
     
     public void bejelentkezes(){
         System.out.print("Add meg a felhasznaloneved: ");

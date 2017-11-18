@@ -32,11 +32,11 @@ public class Beszallito {
     public void beszerzesiIgenyAttekintes(){
         class Igeny{
             Ujsag uj;
-            int mi; //megrendelési igény odb-db
+            int megrendelesiIgeny;
             
-            public Igeny(Ujsag _uj){
-                uj=_uj;
-                mi=uj.getOdb()-uj.getDb();
+            public Igeny(Ujsag uj){
+                this.uj=uj;
+                megrendelesiIgeny=uj.getOdb()-uj.getDb();
             }
         }
         
@@ -56,17 +56,17 @@ public class Beszallito {
                     int maxid=0;
                     int h;
                     for(h=i+1; h<beszig.size(); h++){
-                        if(beszig.get(h).mi>=max){
-                            max=beszig.get(h).mi;
+                        if(beszig.get(h).megrendelesiIgeny>=max){
+                            max=beszig.get(h).megrendelesiIgeny;
                             maxid=h;
                         }
                     }
-                    System.out.println(beszig.get(h).mi + " " + beszig.get(h).uj.getNev());
+                    System.out.println(beszig.get(h).megrendelesiIgeny + " " + beszig.get(h).uj.getNev());
                     beszig.remove(h);
                 }            
             }
         }catch(Exception e){
-            System.out.println("A funkcio nem elereto!");
+            System.out.println("A funkcio nem elerheto!");
         }
     }
     
