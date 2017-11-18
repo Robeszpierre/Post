@@ -1,5 +1,7 @@
 package post;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.*;
 
 public class Post {
@@ -15,6 +17,7 @@ public class Post {
     }
 
     private void start() {
+        termekekBetoltese();
         Latogato latogato=new Latogato();
         while(!finished){
             if(!bejelentkezett){
@@ -34,4 +37,21 @@ public class Post {
         bejelentkezett=true;
     }
     
+    public static void kijelentkezett() {
+        bejelentkezett=false;
+    }
+    
+    private void termekekBetoltese(){
+        try{
+        Scanner fileInput=new Scanner(new File("src/post/Termekek/ujsagok.txt"));
+        while(fileInput.hasNext()){
+            String nev=fileInput.nextLine();
+            int ar=Integer.parseInt(fileInput.nextLine());
+            list.add(new Ujsag(nev, ar));
+        }
+        fileInput.close();
+        }catch(FileNotFoundException e){
+            System.out.println("File nem talalhato");
+        }
+    }
 }

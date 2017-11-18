@@ -9,6 +9,6 @@ public class Beszallito {
     public void arajanlat(){
         
     }
-    public void BeszIgAtt(){}
-    public void Kedvezmeny(){}
+    public void beszerzesiIgenyAttekintes(){}
+    public void kedvezmeny(){}
 }

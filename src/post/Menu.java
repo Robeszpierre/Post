@@ -26,7 +26,7 @@ public class Menu {
     }
     
     public static void ugyfelMenu(Ugyfel ugyfel){
-        System.out.println("1 - listazas\n" + "2 - kereses\n" + "3 - megrendeles\n" + "9 - Kilepes a programbol");
+        System.out.println("1 - listazas\n" + "2 - kereses\n" + "3 - megrendeles\n" + "8 - kijelentkezes\n" + "9 - Kilepes a programbol");
         System.out.print("Add meg a parancs sorszamat ");
         executeCommand2(reader.nextInt(), ugyfel);
     }
@@ -39,6 +39,8 @@ public class Menu {
             case 2: ugyfel.kereses();
             break;
             case 3: ugyfel.megrendeles();
+            break;
+            case 8: Post.kijelentkezett();
             break;
             case 9: Post.finished();
         }
