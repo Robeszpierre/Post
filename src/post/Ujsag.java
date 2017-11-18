@@ -6,14 +6,14 @@ public class Ujsag {
     private String nev;
     private int ar;
 
-    private int darabSzam;
+    private int db;
     
     ///////////////////////////////////////
     
-    public Ujsag(String _nev, int _ar, int _darabSzam){
+    public Ujsag(String _nev, int _ar, int _db){
         nev=_nev;
         ar=_ar;
-        darabSzam= _darabSzam;
+        db= _db;
     }
     
     public void setNev(String _nev){
