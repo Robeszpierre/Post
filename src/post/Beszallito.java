@@ -46,24 +46,26 @@ public class Beszallito {
             if(list.isEmpty()){
                 System.out.println("A rendszer nem talal megrendeleseket!");
             }else{
-            
+                
             for(int i=0; i<list.size(); i++){
                 beszig.add(new Igeny(list.get(i)));
             }
-           
-                for(int i=0; i<list.size(); i++){
-                    int max=0;
+            
+            int i;
+                for(i=0; i<list.size()-1; i++){
+                    int max=-1;
                     int maxid=0;
                     int h;
                     for(h=i+1; h<beszig.size(); h++){
-                        if(beszig.get(h).megrendelesiIgeny>=max){
+                        if(max<beszig.get(h).megrendelesiIgeny){
                             max=beszig.get(h).megrendelesiIgeny;
                             maxid=h;
                         }
                     }
-                    System.out.println(beszig.get(h).megrendelesiIgeny + " " + beszig.get(h).uj.getNev());
-                    beszig.remove(h);
-                }            
+                    System.out.println(beszig.get(maxid).megrendelesiIgeny + " " + beszig.get(maxid).uj.getNev());
+                    beszig.remove(maxid);
+                }
+                System.out.println(beszig.get(0).megrendelesiIgeny + " " + beszig.get(0).uj.getNev());
             }
         }catch(Exception e){
             System.out.println("A funkcio nem elerheto!");
